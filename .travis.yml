@@ -15,7 +15,7 @@ after_success:
   - docker build -t andreipop85/multi-worker ./worker
   # loging into docker
   - echo "$DOCKER_PWD" | docker login -u "$DOCKER_ID" --password-stdin
-  - docker push ndreipop85/multi-client
-  - docker push ndreipop85/multi-nginx
-  - docker push ndreipop85/multi-server
-  - docker push ndreipop85/multi-worker
+  - docker push andreipop85/multi-client
+  - docker push andreipop85/multi-nginx
+  - docker push andreipop85/multi-server
+  - docker push andreipop85/multi-worker
