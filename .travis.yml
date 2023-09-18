@@ -19,3 +19,15 @@ after_success:
   - docker push andreipop85/multi-nginx
   - docker push andreipop85/multi-server
   - docker push andreipop85/multi-worker
+
+deploy:
+  proivder: elasticbeanstalk
+  region: eu-north-1
+  app: multi-docker
+  env: Multi-docker-env
+  bucket_name: elasticbeanstalk-eu-north-1-766895652364
+  bucket_path: docker-multi
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
